@@ -1,17 +1,19 @@
 #mycanvas {
     display: block;
-    margin: auto;
+    margin: 1rem auto;
     border-style: solid;
     border-width: 1px;
 }
-input[type="range"]{
+input[type="range"] {
     width: 100%;
+    margin-top: 0.5rem;
 }
 .rangeBar{
     display: block;
     margin: auto;
-    width: 50%;
+    min-width: 410px;
+    max-width: 50%;
+    text-align: center;
 }
-/* #RedInput   {
-    accent-color: red;
-} */
+
+/* <!-- nattaphong KONGNANG-OM 2210511101021 --> */

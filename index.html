@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<!-- nattaphong KONGNANG-OM 2210511101021 -->
 <html>
     <head>
         <meta charset="UTF-8">
@@ -8,27 +9,33 @@
     </head>
 
     <body>
+        <nav> 2210511101021 </nav>
         <canvas id = "mycanvas"></canvas>
         <form action="">
             <div class="rangeBar" >
-
+                <span id="RedValue">0</span>
                 <input type="range" id="RedInput" 
                     min="-255" max="255" value="0" style="accent-color: red">
-                <span id="RedValue">0</span>
-
-                <input type="range" id="GreenInput" 
-                    min="-255" max="255" value="0" step="1" style="accent-color: Green">
+                
                 <span id="GreenValue">0</span>
-
+                <input type="range" id="GreenInput" 
+                    min="-255" max="255" value="0"  style="accent-color: Green">
+                
+                <span id="BlueValue">0</span>
                 <input type="range" id="BlueInput" 
                     min="-255" max="255" value="0" style="accent-color: blue">
-                <span id="BlueValue">0</span>
+                
+                <span id="AlphaValue">0</span>
+                <input type="range" id="AlphaInput" 
+                    min="-255" max="0" value="0" style="accent-color: rgb(105, 105, 119)">
+
+                <br>
+                <button onclick="resetRGB()" > Reset </button>
             </div>
         </form>
 
         <script src="js/script.js"></script>
         <script src="js/scriptRange.js"></script>
-        <a href="test.html">aaaaaaaaaaaa</a>
     </body>
 
 </html>
