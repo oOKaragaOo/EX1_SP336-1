@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Manipulation</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <canvas id = "mycanvas"></canvas>
+        <form action="">
+            <div class="rangeBar" ></div>
+                <input type="range" id="RedInput" 
+                    min="-2550" max="2550" value="0" style="accent-color: red">
+                <span id="RedValue">0</span>
+
+                <input type="range" id="GreenInput" 
+                    min="-255" max="255" value="0" style="accent-color: Green">
+                <span id="GreenValue">0</span>
+
+                <input type="range" id="BlueInput" 
+                    min="-255" max="255" value="0" style="accent-color: blue">
+                <span id="BlueValue">0</span>
+        </form>
+
+        <script src="js/script.js"></script>
+        <script src="js/scriptRange.js"></script>
+    </body>
+
+</html>

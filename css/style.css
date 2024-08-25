@@ -1,5 +1,9 @@
 #mycanvas {
+    display: block;
+    margin: auto;
     border-style: solid;
     border-width: 1px;
-    }
-    
+}
+/* #RedInput   {
+    accent-color: red;
+} */
