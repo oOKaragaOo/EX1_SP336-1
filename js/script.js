@@ -7,25 +7,24 @@ const image1 = new Image();
 
 image1.src = 'fig/apples.jpg';
 
-    image1.addEventListener('load', function(){
-        ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
-        const scannedImage = ctx.getImageData(0,0, canvas.width, canvas.height);
-        const scannedData = scannedImage.data; 
-        
-        modifyImageData(scannedData);
-    
-    
-        console.log(RedInput.value)
-        scannedImage.data = scannedData;
-        ctx.putImageData(scannedImage, 0, 0);
-    });
+image1.addEventListener('load', function(){
+    ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
+    modifyImageData();
+});
 
-function modifyImageData(scannedData ){
-for (let i = 0; i < scannedData.length; i+=4){
+function modifyImageData(){ 
+    const scannedImage = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const scannedData = scannedImage.data;
 
-       scannedData[i] = RedInput.value; //Red
-    //    scannedData[i+1] = 0; //Green
-    //    scannedData[i+2] = 0; //Blue
-    //    scannedData[i+3] = 0; //Alpha
+    const redValue = parseInt(RedInput.value);
+    const greenValue = parseInt(GreenInput.value);
+    const blueValue = parseInt(BlueInput.value);
+
+    for (let i = 0; i < scannedData.length; i += 4){
+        scannedData[i] =  Math.min(255, scannedData[i] + redValue);
+        scannedData[i+1] = Math.min(255, scannedData[i+1] + greenValue);
+        scannedData[i+2] = Math.min(255, scannedData[i+2] + blueValue);
     }
+    
+    ctx.putImageData(scannedImage, 0, 0);
 }
