@@ -12,7 +12,7 @@ image1.src = 'fig/apples.jpg';
         const scannedImage = ctx.getImageData(0,0, canvas.width, canvas.height);
         const scannedData = scannedImage.data; 
         
-        modifyImageData(scannedData , RedInput.value );
+        modifyImageData(scannedData);
     
     
         console.log(RedInput.value)
