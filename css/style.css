@@ -5,7 +5,12 @@
     border-width: 1px;
 }
 input[type="range"]{
-    width: 500px;
+    width: 100%;
+}
+.rangeBar{
+    display: block;
+    margin: auto;
+    width: 50%;
 }
 /* #RedInput   {
     accent-color: red;

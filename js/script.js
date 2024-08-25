@@ -18,13 +18,14 @@ function modifyImageData(){
 
     const redValue = parseInt(RedInput.value);
     const greenValue = parseInt(GreenInput.value);
-    const blueValue = parseInt(BlueInput.value);
+    const blueValue = parseInt(BlueInput.value); 
+
 
     for (let i = 0; i < scannedData.length; i += 4){
         scannedData[i] =  Math.min(255, scannedData[i] + redValue);
         scannedData[i+1] = Math.min(255, scannedData[i+1] + greenValue);
         scannedData[i+2] = Math.min(255, scannedData[i+2] + blueValue);
     }
-    
+    console.log(scannedData)
     ctx.putImageData(scannedImage, 0, 0);
 }
