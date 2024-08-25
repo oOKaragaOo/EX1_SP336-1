@@ -11,20 +11,21 @@ image1.src = 'fig/apples.jpg';
         ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
         const scannedImage = ctx.getImageData(0,0, canvas.width, canvas.height);
         const scannedData = scannedImage.data; 
-
         
-
-        RedInput.addEventListener('input', function(){
-            for (let i = 0; i < scannedData.length; i+=4){
-        
-        // scannedData[i] = 0; //Red
-    //    scannedData[i+1] = 0; //Green
-    //    scannedData[i+2] = 0; //Blue
-    //    scannedData[i+3] = 0; //Alpha
-    }
-        });
+        modifyImageData(scannedData , RedInput.value );
+    
     
         console.log(RedInput.value)
         scannedImage.data = scannedData;
         ctx.putImageData(scannedImage, 0, 0);
     });
+
+function modifyImageData(scannedData ){
+for (let i = 0; i < scannedData.length; i+=4){
+
+       scannedData[i] = RedInput.value; //Red
+    //    scannedData[i+1] = 0; //Green
+    //    scannedData[i+2] = 0; //Blue
+    //    scannedData[i+3] = 0; //Alpha
+    }
+}
